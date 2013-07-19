@@ -7,27 +7,29 @@
   https://kuler.adobe.com/Copy-of-Jaws-color-theme-2668083/
  */
 
-color-alert        = #D30027
-color-bg-default   = #FCFBE7
-color-bg-compl     = #9FD3DA
-color-text-strong  = #05484F
-color-text-default = #008C9A
+color-alert            = #D30027
+color-bg-default       = #FCFBE7
+color-bg-compl         = #9FD3DA
+color-text-strong      = #05484F
+color-text-default     = #008C9A
+mobile-width           = 500px
+mobile-min-width-query = "screen and (min-width: " + mobile-width + ")"
 
 /*
   Generic
  */
-form p.hint
-  font-size 77%
-  margin -1em 0 1em 0
-  color color-bg-compl
-  text-align right
-
-form p.hint a
-  color color-bg-compl
-
-form p.hint a:hover
-  text-decoration underline
-  color color-text-default
+form
+  p.hint
+    font-size 77%
+    margin -1em 0 1em 0
+    color color-bg-compl
+    text-align right
+    a
+      color color-bg-compl
+      &:focus,
+      &:hover
+        text-decoration underline
+        color color-text-default
 
 default-shadow(color)
   -webkit-box-shadow 0 0 5px color
@@ -35,7 +37,7 @@ default-shadow(color)
   box-shadow 0 0 5px color
 
 /*
-  Auth
+  Auth (aka login screen and pre-auth dialogs and messages)
  */
 @css {
   body, html {
@@ -53,60 +55,67 @@ default-shadow(color)
 .vertical-align-wrap
   position relative
   height 100%
-
-.vertical-align-wrap > div
-  position absolute
-  top 50%
-  left auto
-  margin-top -10em
-  width 100%
+  > div
+    position absolute
+    top 50%
+    left auto
+    margin-top -10em
+    width 100%
 
 .auth-block
-  max-width 30em
+  max-width mobile-width
   margin 0 auto
   background white
   padding 1.5em 2em 2em 2em
 
-  @media screen and (min-width: 30em)
+  @media mobile-min-width-query
     border-radius 1em
 
-.auth-block h1
-  margin 0 0 .8em 0
-  font-size 130%
+  a:hover
+    text-decoration underline
 
-.auth-block h1 a
-  color color-text-default
+  h1
+    margin 0 0 .8em 0
+    font-size 130%
+    a
+      color color-text-default
+      strong
+        color color-text-strong
+      &:hover
+        text-decoration none
+        strong
+          color color-alert
 
-.auth-block h1 strong
-  color color-text-strong
+  form
+    margin 0
+    input[type=submit]
+      margin 0
+      width 100%
+      color color-bg-default
+      background color-text-default
+      border-style none
+      cursor pointer
+      padding .3em 1em
+      text-align right
+      &:hover,
+      &:focus
+        background color-text-strong
+        default-shadow #999
 
-.auth-block form
-  margin 0
+  .button-group
+    text-align right
+    *
+      float none
+      vertical-align middle
+    a.button:hover
+      text-decoration none
 
-.auth-block .button-group
-  text-align right
+/*
+  Backend administration
 
-.auth-block .button-group *
-  float none
-  vertical-align middle
-
-.auth-block .button-group a.button:hover
-  text-decoration none
-
-.auth-block a:hover
-  text-decoration underline
-
-.auth-block form input[type=submit]
-  margin 0
+  Main window
+ */
+.admin-main
+  background white
+  height 100%
   width 100%
-  color color-bg-default
-  background color-text-default
-  border-style none
-  cursor pointer
-  padding .3em 1em
-  text-align right
-
-.auth-block form input[type=submit]:hover,
-.auth-block form input[type=submit]:focus
-  background color-text-strong
-  default-shadow #999
