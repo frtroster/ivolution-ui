@@ -17,7 +17,7 @@ goog.require 'este.demos.react.start'
 ###
 ivolution.app.backend.start = (data) ->
 
-  alert "Hello CoffeeScript!"
+  # alert "Hello CoffeeScript!"
 
 # Ensures the symbol will be visible after compiler renaming.
 goog.exportSymbol 'ivolution.app.backend.start', ivolution.app.backend.start

@@ -1,10 +1,20 @@
-@import '../../../bower_components/normalize-css/normalize.css'
 @import '../../../bower_components/stylus-nib'
-@import '../../../bower_components/este-library/este/css'
 
-body
-  font-family Tahoma
-  margin 1em
+/*
+  Colors based on scheme
+
+  https//kuler.adobe.com/Copy-of-Jaws-color-theme-2668083/
+ */
+
+color-alert        = #D30027
+color-bg-default   = #FCFBE7
+color-bg-compl     = #9FD3DA
+color-text-strong  = #05484F
+color-text-default = #008C9A
+
+body, html
+  background color-text-strong
+  height 100%
 
 h1, h2, h3, h4
   margin-bottom 0
@@ -12,7 +22,36 @@ h1, h2, h3, h4
 h2
   font-size 1.2em
 
-p, #todo-mvc
-  margin-left 1em
-  margin-top 1em
-  max-width 47em
+.login-block
+  position relative
+  height 100%
+
+.login-block > div
+  position absolute
+  top 50%
+  left 0
+  margin-top -10em
+  width 100%
+  padding 3em 0
+
+.login-block form
+  margin 0
+
+.login-block form input[type=submit]
+  margin 0
+  width 100%
+  color #FCFBE7
+  background color-text-default
+  border-style none
+  cursor pointer
+  padding .8em 0
+  font-weight bold
+
+.login-block form input[type=submit]hover
+  background #05484F
+
+.login-block form .row
+
+.login-block form .row > div
+  vertical-align middle
+  text-align right

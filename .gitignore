@@ -1,6 +1,7 @@
 # http://git-scm.com/docs/gitignore
 
 .DS_Store
+.sass-cache
 ivolution-ui.sublime-workspace
 
 bower_components/

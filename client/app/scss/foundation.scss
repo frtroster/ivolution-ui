@@ -1,9 +1,11 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
-$primary-color: #2ba6cb;
-$secondary-color: #e9e9e9;
-$alert-color: #c60f13;
+$body-font-color: #05484F;
+$header-font-color: #008C9A;
+$primary-color: #05484F;
+$secondary-color: #FCFBE7;
+$alert-color: #D30027;
 $success-color: #5da423;
 
 @import "normalize";
