@@ -1,0 +1,24 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+$primary-color: #2ba6cb;
+$secondary-color: #e9e9e9;
+$alert-color: #c60f13;
+$success-color: #5da423;
+
+@import "normalize";
+@import "foundation/_variables";
+@import "foundation/components/_global";
+@import "foundation/components/_grid";
+@import "foundation/components/_block-grid";
+@import "foundation/components/_type";
+@import "foundation/components/_buttons";
+@import "foundation/components/_forms";
+@import "foundation/components/_button-groups";
+@import "foundation/components/_alert-boxes";
+@import "foundation/components/_breadcrumbs";
+@import "foundation/components/_panels";
+@import "foundation/components/_progress-bars";
+@import "foundation/components/_sub-nav";
+@import "foundation/components/_tables";
+@import "foundation/components/_thumbs";

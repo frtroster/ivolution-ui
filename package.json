@@ -1,0 +1,55 @@
+{
+  "name": "este",
+  "version": "3.9.2",
+  "description": "Este is robust, modular and comfortable dev stack for web apps development with several unique features",
+  "author": "Daniel Steigerwald <daniel@steigerwald.cz>",
+  "keywords": [
+    "Closure",
+    "CoffeeScript",
+    "Compiler",
+    "Este",
+    "Google",
+    "Mocha",
+    "Soy",
+    "Stylus"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steida/este.git"
+  },
+  "dependencies": {
+    "express": "~3.3.1",
+    "jade": "~0.34.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-bg-shell": "~2.1.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-stylus": "~0.6.0",
+    "grunt-env": "~0.4.0",
+    "grunt-este": "~2.3.1",
+    "grunt-este-watch": "~0.1.1",
+    "grunt-npm": "0.0.2",
+    "grunt-release": "~0.3.5",
+    "grunt-text-replace": "~0.3.2",
+    "piping": "~0.1.6",
+    "grunt-sass": "~0.6.0"
+  },
+  "scripts": {
+    "start": "node server/app",
+    "test": "grunt build --stage"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "license": "MIT",
+  "subdomain": "este",
+  "contributors": [
+    "Steida <daniel@steigerwald.cz>",
+    "Michael Czolko <michael@czolko.cz>",
+    "VojtechBartos <me@vojtechbartos.cz>"
+  ]
+}
