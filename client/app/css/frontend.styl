@@ -1,0 +1,317 @@
+@import 'foundation.css'
+@import '../../../deps/foundation-icons/foundation-icons.css'
+@import '../../../bower_components/stylus-nib'
+
+/*
+  Colors based on scheme
+
+  https://kuler.adobe.com/Copy-of-Jaws-color-theme-2668083/
+ */
+
+color-alert            = #D30027
+color-bg-default       = #FCFBE7
+color-bg-compl         = #9FD3DA
+color-text-strong      = #05484F
+color-text-default     = #008C9A
+mobile-width           = 500px
+mobile-min-width-query = "screen and (min-width: " + mobile-width + ")"
+
+/*
+  Generic
+ */
+form
+  p.hint
+    font-size 77%
+    margin -1em 0 1em 0
+    color color-bg-compl
+    text-align right
+    a
+      color color-bg-compl
+      &:focus,
+      &:hover
+        text-decoration underline
+        color color-text-default
+
+default-shadow(color)
+  -webkit-box-shadow 0 0 5px color
+  -moz-box-shadow 0 0 5px color
+  box-shadow 0 0 5px color
+
+window-shadow(color)
+  -webkit-box-shadow 0 0 10px color
+  -moz-box-shadow 0 0 10px color
+  box-shadow 0 0 10px color
+
+body,
+html
+  height 100%
+  background-color white
+  background-attachment fixed
+
+.coral-bar
+  min-height 100px
+  position relative
+  border-top 1px solid #ccc
+  margin-top 2em
+  background #f5f5f5
+  padding 1em 0
+  &:after
+    content ""
+    position absolute
+    z-index 1
+    top 0
+    width 100%
+    height 1em
+    left 0
+
+  .upload
+    background #eee
+    border 2px dotted #ddd
+    text-align center
+    color #aaa
+    font-weight bold
+    text-transform lowercase
+    font-size 85%
+    border-radius 5px
+    padding 3em 0 2em 0
+    vertical-align middle
+    i
+      font-size 3em
+      color inherit
+    &:hover
+      color #888
+      border-color #888
+
+  table
+    border-style none
+    text-align left
+    background transparent
+    tr
+      background transparent
+      vertical-align top
+      border-bottom 1px dashed #ddd
+    td,
+    th
+      padding .4em 0
+      line-height inherit
+    th
+      font-style italic
+      font-weight normal
+      color #444
+    td
+      color #888
+
+
+@css {
+  .coral-bar:after {
+    background: radial-gradient(ellipse at 50% -3%, rgba(00, 00, 00, 0.2), rgba(97, 97, 97, 0.0) 40%);
+  }
+}
+
+@keyframes modalshow {
+  from {
+    left -1000px
+  }
+  to {
+    left 50%
+  }
+}
+
+.coral-modal
+  top 1em
+  bottom 1em
+  left 50%
+  height auto
+  width 100%
+  margin 0
+  position fixed
+  border-radius 5px
+  padding 0
+  background #f5f5f5
+  border-style none
+  display none
+  window-shadow(#666)
+  z-index 900
+  visibility hidden
+  max-width 60rem
+  margin-left -30rem
+  overflow hidden
+  &.active
+    visibility visible
+    display block
+    animation modalshow 200ms
+
+  .header
+    background white
+    border-bottom 1px solid #ccc
+    border-top-right-radius 5px
+    border-top-left-radius 5px
+    margin-top -3px
+    text-align right
+    h2
+      color #444
+      font-weight normal
+      font-size 110%
+      text-align left
+      display inline-block
+      position absolute
+      left 1em
+      top .5em
+    a.close-coral-modal
+      display inline-block
+      border-left 1px solid #ccc
+      padding .5em 1em .5em 1em
+      font-size 168%
+      color #ccc
+      &:hover
+        color #888
+
+  .content
+    padding 1em
+    overflow auto
+    padding-bottom 7em
+    height 100%
+
+    ul.coral-tree
+      list-style none
+      margin 0
+      li
+        list-style none
+        z-index 2
+        position relative
+      a
+        display block
+        color #888
+        padding .1em 2em
+        border-radius 5px
+        font-size 85%
+        position relative
+        &:hover
+          background rgba(0, 0, 0, .1)
+        &:hover:after
+          position absolute
+          right .5em
+          height .5em
+          border 2px dotted #f5f5f5
+          top .65em
+          border-width 2px 0
+          content ''
+          width 1em
+      ul
+        margin 0
+      ul li
+        background-repeat repeat-y
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAKAQMAAABPHKYJAAAAA1BMVEWIiIhYZW6zAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1ggGExMZBky19AAAAAtJREFUCNdjYMAEAAAUAAHlhrBKAAAAAElFTkSuQmCC')
+        background-position 2em .3em
+        padding-bottom .3em
+      ul ul li
+        background-position 4em .3em
+      ul ul ul li
+        background-position 6em .3em
+      ul ul ul ul li
+        background-position 8em .3em
+      ul ul ul ul ul li
+        background-position 10em .3em
+      ul > li:last-child
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUBAAAAABQgM62AAAAAnRSTlMAAHaTzTgAAAACYktHRAAIpFarAAAAAAlwSFlzAAAASAAAAEgARslrPgAAABRJREFUCNdjaGAAAuoQHUDAgAUAABBSCaFl4A2xAAAAMHRFWHRjb21tZW50AEVkaXRlZCB3aXRoIEx1bmFQaWM6IGh0dHA6Ly9sdW5hcGljLmNvbS+9CjLcAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEzLTExLTI0VDE0OjIxOjQ1LTA4OjAw3g4mYQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxMy0xMS0yNFQxNDoyMTo0NS0wODowMK9Tnt0AAAAASUVORK5CYII=')
+        background-repeat no-repeat
+        background-position 2em -.2em
+      ul ul > li:last-child
+        background-position 4em -.2em
+      ul ul ul > li:last-child
+        background-position 6em -.2em
+      ul ul ul > li:last-child
+        background-position 8em -.2em
+      ul ul ul ul > li:last-child
+        background-position 10em -.2em
+      ul a
+        padding-left 4em
+      ul ul a
+        padding-left 6em
+      ul ul ul a
+        padding-left 8em
+      ul ul ul ul  a
+        padding-left 10em
+
+  .buttons
+    background #fff
+    position absolute
+    bottom 0
+    left 0
+    border-top 1px solid #ccc
+    width 100%
+    border-bottom-right-radius 5px
+    border-bottom-left-radius 5px
+    padding 1em
+    ul.button-group
+      margin 0
+      li a
+        margin 0
+
+.vertical-align-wrap
+  position relative
+  height 100%
+  > div
+    position absolute
+    top 50%
+    left auto
+    margin-top -10em
+    width 100%
+
+.auth-block
+  max-width mobile-width
+  margin 0 auto
+  background white
+  padding 1.5em 2em 2em 2em
+
+  @media mobile-min-width-query
+    border-radius 1em
+
+  a:hover
+    text-decoration underline
+
+  h1
+    margin 0 0 .8em 0
+    font-size 130%
+    a
+      color color-text-default
+      strong
+        color color-text-strong
+      &:hover
+        text-decoration none
+        strong
+          color color-alert
+
+  form
+    margin 0
+    input[type=submit]
+      margin 0
+      width 100%
+      color color-bg-default
+      background color-text-default
+      border-style none
+      cursor pointer
+      padding .3em 1em
+      text-align right
+      &:hover,
+      &:focus
+        background color-text-strong
+        default-shadow #999
+
+  .button-group
+    text-align right
+    *
+      float none
+      vertical-align middle
+    a.button:hover
+      text-decoration none
+
+/*
+  Backend administration
+
+  Main window
+ */
+.admin-main
+  background white
+  height 100%
+  width 100%

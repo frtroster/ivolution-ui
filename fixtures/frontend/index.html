@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login screen</title>
+    <link rel="stylesheet" href="/client/app/css/frontend.css">
+    <script src="/bower_components/closure-library/closure/goog/base.js"></script>
+    <script src="/client/deps.js"></script>
+    <script src="/client/app/js/start.js"></script>
+</head>
+<body class="antialiased off-canvas hide-extras">
+  <div id="header">
+    <div class="row">
+      <div class="large-12 columns">
+        <nav class="top-bar">
+          <ul class="title-area">
+            <li class="name">
+              <h1><a href="/frontend_dev.php/en">ORM Designer</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          </ul>
+
+          <section class="top-bar-section">
+            <ul class="right">
+              <li class="divider"></li><li><a href="/frontend_dev.php/en/supported-platforms?culture=en" title="Common Information">Common Information</a></li><li class="divider"></li><li><a href="/frontend_dev.php/en/product-tour?culture=en" title="How to Use">How to Use</a></li><li class="divider"></li><li><a href="/frontend_dev.php/en/frameworks-tutorials" title="Frameworks Tutorials">Frameworks Tutorials</a></li><li class="divider"></li><li><a href="/frontend_dev.php/en/configuration-files?culture=en" title="Expert Usage">Expert Usage</a></li>          </ul>
+          </section>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <section class="main">
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Model Basics</h1>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-9 push-3 columns text-content">
+        <p>ORM Designers main functionality is ORM <strong>models management</strong>. Each ORM model consists of several basic elements. In this article, you will find <strong>overview of these elements</strong>. All elements are created using ORM Designer <em>Model tools</em>.</p>
+        <p><em>Project</em> represents one <strong>specific application</strong>. Each <em>project</em> is defined by ORM framework and MVC framework and contain one or more <em>modules</em>.</p>
+        <p><em>Modules</em> are used to represent <strong>stand-alone parts</strong> of your model. Based on ORM and MVC framework you can use <em>module</em> to represent <strong>plugins, packages or modules</strong> itself. Depending on ORM framework <em>modules</em> represent either individual schema files or directories.</p>  <h2>Regions and comments</h2>
+        <p>Those two element types serve for <strong>better visual orientation</strong> in ORM model. <em>Regions</em> can be created anywhere inside the modules. You can then position entities and <em>comments</em> inside the <em>regions</em> for easier model readability. <em>Comments</em> can be placed anywhere in the module or <em>region</em> to write down important notes.</p>
+        <p><em><strong>Note:</strong> Regions and comments don't influence the exported schema files.</em></p>  <h2>Entities</h2>
+        <p>Main element of ORM model is <em>entity</em>. Each <em>entity</em> represents one <strong>serializable object</strong> from user's code. It's up to ORM framework how the <em>entity</em> is stored to database or other storage.</p>
+        <p><em>Association</em> element is used to define <strong>relation between two entities</strong>. ORM Designer uses <strong>owner and inverse</strong> terminology to define relationship sides. Owner entity owns the <em>associations</em> as well as <em>association field</em>. Each <em>association</em> leads from owner entity to inverse one. Inverse entity is entity on the opposite side of <em>association</em>, in some terminology also called 'parent'.</p>
+        <p><em><strong>Note:</strong> ORM Designer supports all available types of associations</em>: <code>one-to-one</code>, <code>one-to-many</code>, <code>many-to-many</code>.</p>  <h2>Inheritance</h2>
+        <p>Another type of relationship between two entities is <em>inheritance</em>. <em>Inheritance</em> is a way how to <strong>derive entities</strong> (known as subclasses or child classes) from another entities (known as base class, superclass or parent class).</p>
+        <p><em><strong>Note</strong>: Based on ORM framework ORM Designer offers several inheritance types (e.g. single table, joined, mapped superclass).</em></p>  <h2>Indexes</h2>
+        <p><em>Indexes</em> are used to <strong>optimize access speed</strong> to data storage through selected fields. Apart from previous model elements <em>indexes</em> aren't currently displayed in visual model. <em>Indexes</em> can be displayed in project tree or inside the entity dialog.</p>
+        <p>For detailed description of how to edit model elements see <a href="editing-model">Editing model</a>.</p>
+        <div class="permalink">
+          Permalink: <a href="http://ormd2-sf1/frontend_dev.php/en/kb/79">http://ormd2-sf1/frontend_dev.php/en/kb/79</a>      </div>
+        </div>
+        <div class="large-3 pull-9 columns">
+          Test tady
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="coral-bar">
+    <div class="row">
+      <div class="large-3 columns">
+        <div class="upload"><i class="fi-upload-cloud"></i><p>Place a new file here</p></div>
+      </div>
+      <div class="large-6 columns">
+        <table width="100%">
+          <tbody>
+            <tr>
+              <th width="130">Created</th>
+              <td>2013-10-22</td>
+            </tr>
+            <tr>
+              <th>Modified</th>
+              <td>2013-11-22</td>
+            </tr>
+            <tr>
+              <th>Permission level</th>
+              <td>inventic_team</td>
+            </tr>
+            <tr>
+              <th>Keywords</th>
+              <td>orm, designer, workbench, comparison</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="button-group radius">
+          <li><a href="#" id="click_on_start" data-coral-id="myModal" class="button tiny secondary"><i class="fi-photo"></i> Gallery</a></li>
+          <li><a href="#" class="button tiny secondary"><i class="fi-widget"></i> Settings</a></li>
+          <li><a href="#" class="button tiny secondary"><i class="fi-megaphone"></i> Translations</a></li>
+          <li><a href="#" class="button tiny secondary"><i class="fi-calendar"></i> Changes</a></li>
+        </ul>
+      </div>
+      <div class="large-3 columns">
+        <ul class="button-group radius right" style="margin-top: 1em">
+          <li><a href="#" class="button small secondary"><i class="fi-trash"></i> Delete</a></li>
+          <li><a href="#" class="button small success"><i class="fi-page-edit"></i> Edit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="myModal" class="coral-modal inactive" data-coral>
+      <section class="header">
+        <h2>Awesome. I have it.</h2>
+        <a class="close-coral-modal">&#215;</a>
+      </section>
+      <section class="content">
+        <div class="row">
+          <div class="large-6 column">
+            <ul class="coral-tree">
+              <li>
+                <a href="#">Homepage</a>
+                <ul>
+                  <li>
+                    <a href="#">Basic support</a>
+                    <ul>
+                      <li><a href="#">How to model</a></li>
+                      <li><a href="#">Associations</a></li>
+                      <li><a href="#">Exporting model</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Advanced modeling</a>
+                    <ul>
+                      <li><a href="#">Many to many associations</a></li>
+                      <li><a href="#">Hyper super truper model</a></li>
+                      <li><a href="#">Simple</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="large-6 column">
+            <p class="lead">Your couch.  It is mine.</p>
+
+            <form>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>Input Label</label>
+                  <input type="text" placeholder="large-12.columns" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-4 columns">
+                  <label>Input Label</label>
+                  <input type="text" placeholder="large-4.columns" />
+                </div>
+                <div class="large-4 columns">
+                  <label>Input Label</label>
+                  <input type="text" placeholder="large-4.columns" />
+                </div>
+                <div class="large-4 columns">
+                  <div class="row collapse">
+                    <label>Input Label</label>
+                    <div class="small-9 columns">
+                      <input type="text" placeholder="small-9.columns" />
+                    </div>
+                    <div class="small-3 columns">
+                      <span class="postfix">.com</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>Select Box</label>
+                  <select>
+                    <option value="husker">Husker</option>
+                    <option value="starbuck">Starbuck</option>
+                    <option value="hotdog">Hot Dog</option>
+                    <option value="apollo">Apollo</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="buttons">
+        <ul class="button-group radius right">
+          <li><a href="#" class="cancel button tiny secondary"><i class="fi-x"></i> Cancel</a></li>
+          <li><a href="#" class="button tiny success"><i class="fi-check"></i> Save</a></li>
+        </ul>
+      </section>
+    </div>
+
+  </section>
+
+  <script type="text/javascript">
+    ivolution.app.backend.start();
+    document.getElementById("click_on_start").onclick();
+  </script>
+</body>
+</html>
