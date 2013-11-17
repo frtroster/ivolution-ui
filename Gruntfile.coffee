@@ -19,6 +19,8 @@ module.exports = (grunt) ->
     'bower_components/closure-library'
     'bower_components/closure-templates'
     'bower_components/este-library/este'
+    'bower_components/jquery'
+    'bower_components/jquery-sortable/source/js'
     'client/app/js'
   ]
 
@@ -136,8 +138,8 @@ module.exports = (grunt) ->
           # Remove some code workarounds for ancient browsers.
           # IE<8 and very old Gecko and Webkit.
           flags = flags.concat [
-            '--define=goog.net.XmlHttp.ASSUME_NATIVE_XHR=true'
-            '--define=este.json.SUPPORTS_NATIVE_JSON=true'
+            # '--define=goog.net.XmlHttp.ASSUME_NATIVE_XHR=true'
+            # '--define=este.json.SUPPORTS_NATIVE_JSON=true'
             '--define=goog.style.GET_BOUNDING_CLIENT_RECT_ALWAYS_EXISTS=true'
           ]
 

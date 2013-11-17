@@ -9,7 +9,7 @@ $alert-color: #D30027;
 $success-color: #5da423;
 
 @import "normalize";
-@import "foundation/variables";
+@import "foundation/settings";
 @import "foundation/components/global";
 @import "foundation/components/grid";
 @import "foundation/components/block-grid";
@@ -24,3 +24,4 @@ $success-color: #5da423;
 @import "foundation/components/sub-nav";
 @import "foundation/components/tables";
 @import "foundation/components/thumbs";
+@import "foundation/components/top-bar";
